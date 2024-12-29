@@ -26,8 +26,19 @@
   description: "Arm, CE-OSS, Trusted Firmware",
 )
 #resume-item[
-  - Maintenance and feature additions to the Hafnium hypervisor component of the
-    Firmware Framework for A-profile processors (FF-A).
+  - Maintain Hafnium, the Secure Partition Manager (SPM) reference
+    implementation for Arm's Firmware Framework specification.
+  - Implement new features to ensure compliance with latest version of FF-A
+    specification.
+  - Focus on improving security and reliability of the Hafnium codebase through
+    static checks.
+    - Enabled checking of `printf` format-strings at compile-time, which required
+      rewriting `printf` implementation to conform to the C language standard.
+    - Parallelised the invocation of `clang-tidy` to reduce time spent waiting
+      for static analysis results in CI.
+    - Enable `-Werror` compiler flag for all Hafnium code.
+    - Upgraded out of date clang toolchain from v16 to v18, and resolved to keep up
+      to date with future clang releases.
 ]
 
 #resume-entry(
