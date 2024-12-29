@@ -55,7 +55,7 @@
 = Skills
 #resume-skill-item(
   "Programming Languages",
-  ("C", "C++", "Rust", "Python", "Shell"),
+  ("C", "C++", "Rust", "Assembly (AArch64, x86_64, RISC-V)", "Python", "Shell"),
 )
 #resume-skill-item(
   "Technologies",
