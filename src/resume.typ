@@ -114,7 +114,7 @@
   - Added implicit arguments, so that users can omit arguments
     that can be inferred from the context.
   - Added tuple expressions and tuple types.
-  - Add `if` expressions to the language.
+  - Added `if` expressions to the language.
   - Investigated and fixed expontential memory usage in printing of nested
     expressions.
 ]
