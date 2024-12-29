@@ -97,6 +97,22 @@
     interpreter pattern to reduce branch mispredications in opcode dispatch.
 ]
 
+#resume-entry(
+  title: "Fathom",
+  date: "2022 - 2023",
+  location: github-link("yeslog/fathom"),
+  description: "Own-time contributor",
+)
+#resume-item[
+  - Contributions to Fathom, a dependently-typed data definition language.
+  - Added implicit arguments, so that users can omit arguments
+    that can be inferred from the context.
+  - Added tuple expressions and tuple types.
+  - Add `if` expressions to the language.
+  - Investigated and fixed expontential memory usage in printing of nested
+    expressions.
+]
+
 = Skills
 #resume-skill-item(
   "Programming Languages",
