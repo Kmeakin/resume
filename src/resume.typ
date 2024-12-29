@@ -63,6 +63,27 @@
     and LLVM compilers.
 ]
 
+= Open Source Contributions
+#resume-entry(
+  title: "Wasmtime",
+  date: "2023 - 2024",
+  location: github-link("bytecodealliance/wasmtime"),
+  description: "Own-time contributor",
+)
+#resume-item[
+  - Contributions to Cranelift, the native code compiler for the Wasmtime
+    WebAssembly runtime.
+  - Contributed to Cranelift's corpus of peephole rewrites.
+  - Canonicalize commutative operators in Cranelift's Global Value Numbering
+    pass, to increase the number of instructions elimiated by the pass
+    (unfortunately later reverted due to regression in compile-times).
+  - Implementation of boolean and integer types for `ISLE`, Cranelift's
+    pattern-matching DSL.
+  - Various minor bug-fixes and documentation improvements to `ISLE`.
+  - Rewrote the `pulley` bytecode interpreter to use the tail-recursive
+    interpreter pattern to reduce branch mispredications in opcode dispatch.
+]
+
 = Skills
 #resume-skill-item(
   "Programming Languages",
