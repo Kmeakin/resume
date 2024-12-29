@@ -50,6 +50,12 @@
 #resume-item[
   - Maintenance and internal improvements to Morello, AArch64's implementation
     of the CHERI memory protection model.
+  - Worked on adding support for power-saving CPU states to Linux when running
+    on Morello.
+    - Added device-tree idle state defintions required to support power-saving
+      CPU states when not using ACPI.
+    - Added LPI state definitions to ACPI required to support power-saving CPU
+      states when using ACPI.
 ]
 
 #resume-entry(
