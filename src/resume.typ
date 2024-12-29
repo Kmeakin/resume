@@ -59,8 +59,21 @@
   description: "Arm, CE-OSS, Rust",
 )
 #resume-item[
-  - Contributed AArch64 feature support and performance improvements to the Rust
-    and LLVM compilers.
+  - AArch64 feature support and performance improvements to the Rust and LLVM
+    compilers.
+  - Setup an internal deployment of `crater`, Rust's regression testing tool.
+  - Investigated changing the default linker on Rust's `aarch64-linux` target to
+    `lld` to reduce compile-times
+    - Using the internal `crater` deployment, identified crates that would be
+      broken by the change, and worked with maintainers to fix them.
+    - Benchmarked the compile-time improvements of using `lld` on the
+      `rustc-perf` benchmark suite.
+  - Contributed AArch64-specific optimizations to LLVM, to improve code generated
+    for the Rust standard library
+    - Optimize checked 128-bit integer arithmetic to use add-with-carry instructions
+      rather than materializing the carry flag from intermediate steps.
+    - Merge `AND`/`ORR`s of `CMP` instructions into chains of `CCMP`.
+    - Simplify nested `CSEL` instructions.
 ]
 
 = Open Source Contributions
