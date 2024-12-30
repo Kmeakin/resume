@@ -52,7 +52,7 @@
     of the CHERI memory protection model.
   - Worked on adding support for power-saving CPU states to Linux when running
     on Morello.
-    - Added device-tree idle state defintions required to support power-saving
+    - Added device-tree idle state definitions required to support power-saving
       CPU states when not using ACPI.
     - Added LPI state definitions to ACPI required to support power-saving CPU
       states when using ACPI.
@@ -115,7 +115,7 @@
     that can be inferred from the context.
   - Added tuple expressions and tuple types.
   - Added `if` expressions to the language.
-  - Investigated and fixed expontential memory usage in printing of nested
+  - Investigated and fixed exponential memory usage in printing of nested
     expressions.
 ]
 
