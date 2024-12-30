@@ -70,7 +70,7 @@
   - Setup an internal deployment of `crater`, Rust's regression testing tool.
   - Investigated changing the default linker on Rust's AArch64 target to `lld`
     to reduce compile-times
-    - Using the internal `crater` deployment, identified crates that would be
+    - Using the internal `crater` deployment, identified libraries that would be
       broken by the change, and worked with maintainers to fix them.
     - Benchmarked the compile-time improvements of using `lld` on the
       `rustc-perf` benchmark suite.
@@ -152,7 +152,7 @@
   - Graduated with First Class Honours
   - Awarded Undergraduate Scholarship for academic performance in 1st year
   - Modules studied included: Compilers, Computer Architecture, Microcontrollers
-  - Undergraduate dissertation: "A LLVM compiler for a subset of Rust"
+  - Undergraduate dissertation: "An LLVM-based compiler for a subset of Rust"
 ]
 
 #resume-entry(
