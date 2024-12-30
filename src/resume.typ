@@ -33,12 +33,12 @@
   - Sought out opportunities to improve security and reliability of the Hafnium codebase using
     static analyser and compiler tools.
     - Enabled checking of `printf` format-strings at compile-time, which required
-    rewriting `printf` implementation to conform to the C language standard.
+      rewriting `printf` implementation to conform to the C language standard.
     - Parallelised the invocation of `clang-tidy` to reduce time spent waiting
-    for static analysis results in CI.
+      for static analysis results in CI.
     - Enable `-Werror` compiler flag for all Hafnium code.
     - Upgraded out of date `clang` toolchain from v16 to v18, and resolved to keep up
-    to date with future `clang` releases.
+      to date with future `clang` releases.
 ]
 
 #resume-entry(
@@ -53,9 +53,9 @@
   - Progressed towards enabling power-saving CPU states in Linux when running
     on Morello.
     - Added device-tree idle state definitions required to support power-saving
-    CPU states when not using ACPI.
+      CPU states when not using ACPI.
     - Added LPI state definitions to ACPI required to support power-saving CPU
-    states when using ACPI.
+      states when using ACPI.
 ]
 
 #resume-entry(
@@ -71,15 +71,15 @@
   - Investigated changing the default linker on Rust's AArch64 target to `lld`
     to reduce compile-times
     - Using the internal `crater` deployment, identified libraries that would be
-    broken by the change, and worked with maintainers to fix them.
+      broken by the change, and worked with maintainers to fix them.
     - Benchmarked the compile-time improvements of using `lld` on the
-    `rustc-perf` benchmark suite.
+      `rustc-perf` benchmark suite.
   - Contributed AArch64-specific optimizations to LLVM, to improve code generated
     for the Rust standard library
-    - Optimise checked 128-bit integer arithmetic to use add-with-carry instructions
-    rather than materializing the carry flag from intermediate steps.
-    - Merge `AND`/`ORR`s of `CMP` instructions into chains of `CCMP`.
-    - Simplify nested `CSEL` instructions.
+    - Optimised checked 128-bit integer arithmetic to use add-with-carry instructions
+      rather than materializing the carry flag from intermediate steps.
+    - Merged `AND`/`ORR`s of `CMP` instructions into chains of `CCMP`.
+    - Simplified nested `CSEL` instructions.
   - Investigated adding a new lint to the Rust compiler to detect ABI
     incompatibilities arising from differences in the definition of the `c_char`
     type between AArch64 and x86_64.
@@ -97,20 +97,20 @@
     WebAssembly runtime.
     - Added new rewrites to the peephole optimisation pass.
     - Modified the Global Value Numbering pass to sort arguments to commutative
-    operators, to increase the number of instructions eliminated by the pass
-    (unfortunately later reverted due to regression in compile-times).
+      operators, to increase the number of instructions eliminated by the pass
+      (unfortunately later reverted due to regression in compile-times).
     - Implemented boolean and integer types for `ISLE`, Cranelift's
-    pattern-matching DSL.
+      pattern-matching DSL.
     - Various minor bug-fixes and documentation improvements to `ISLE`.
   - Contributions to Pulley, the portable bytecode interpreter that allows
     Wasmtime to run WebAssembly on targets that are not yet supported by
     Cranelift.
     - Rewrote the bytecode interpreter to use the tail-recursive interpreter
-    pattern to reduce branch mispredictions in opcode dispatch.
-    - Added opcodes for pushing and popping multiple registers to/from the stack
-    in a single instruction.
+      pattern to reduce branch mispredictions in opcode dispatch.
+    - Added instructions for pushing and popping multiple registers to/from the stack
+      in a single instruction.
     - Reduced the size of the most commonly used instructions from 4 bytes to 3
-    bytes by packing the register arguments into a bitfield.
+      bytes by packing the register arguments into a bitfield.
 ]
 
 #resume-entry(
