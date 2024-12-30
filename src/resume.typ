@@ -26,19 +26,19 @@
   description: "Arm, CE-OSS, Trusted Firmware",
 )
 #resume-item[
-  - Maintain Hafnium, the Secure Partition Manager (SPM) reference
+  - Maintained Hafnium, the Secure Partition Manager (SPM) reference
     implementation for Arm's Firmware Framework specification.
-  - Implement new features to ensure compliance with latest version of FF-A
+  - Implemented new features to ensure compliance with latest version of FF-A
     specification.
-  - Focus on improving security and reliability of the Hafnium codebase through
-    static checks.
+  - Sought out opportunities to improve security and reliability of the Hafnium codebase using
+    static analyser and compiler tools.
     - Enabled checking of `printf` format-strings at compile-time, which required
       rewriting `printf` implementation to conform to the C language standard.
     - Parallelised the invocation of `clang-tidy` to reduce time spent waiting
       for static analysis results in CI.
     - Enable `-Werror` compiler flag for all Hafnium code.
-    - Upgraded out of date clang toolchain from v16 to v18, and resolved to keep up
-      to date with future clang releases.
+    - Upgraded out of date `clang` toolchain from v16 to v18, and resolved to keep up
+      to date with future `clang` releases.
 ]
 
 #resume-entry(
@@ -48,9 +48,9 @@
   description: "Arm, CE-OSS, Morello",
 )
 #resume-item[
-  - Maintenance and internal improvements to Morello, AArch64's implementation
-    of the CHERI memory protection model.
-  - Worked on adding support for power-saving CPU states to Linux when running
+  - Maintened Morello, AArch64's implementation of the CHERI memory
+    protection model.
+  - Progressed towards enabling power-saving CPU states in Linux when running
     on Morello.
     - Added device-tree idle state definitions required to support power-saving
       CPU states when not using ACPI.
@@ -65,11 +65,11 @@
   description: "Arm, CE-OSS, Rust",
 )
 #resume-item[
-  - AArch64 feature support and performance improvements to the Rust and LLVM
-    compilers.
+  - Implemented feature support and performance improvements for the AArch64
+    Rust target.
   - Setup an internal deployment of `crater`, Rust's regression testing tool.
-  - Investigated changing the default linker on Rust's `aarch64-linux` target to
-    `lld` to reduce compile-times
+  - Investigated changing the default linker on Rust's AArch64 target to `lld`
+    to reduce compile-times
     - Using the internal `crater` deployment, identified crates that would be
       broken by the change, and worked with maintainers to fix them.
     - Benchmarked the compile-time improvements of using `lld` on the
@@ -80,6 +80,9 @@
       rather than materializing the carry flag from intermediate steps.
     - Merge `AND`/`ORR`s of `CMP` instructions into chains of `CCMP`.
     - Simplify nested `CSEL` instructions.
+  - Investigated adding a new lint to the Rust compiler to detect ABI
+    incompatibilities arising from differences in the definition of the `c_char`
+    type between AArch64 and x86_64.
 ]
 
 = Open Source Contributions
@@ -92,15 +95,22 @@
 #resume-item[
   - Contributions to Cranelift, the native code compiler for the Wasmtime
     WebAssembly runtime.
-  - Contributed to Cranelift's corpus of peephole rewrites.
-  - Canonicalize commutative operators in Cranelift's Global Value Numbering
-    pass, to increase the number of instructions elimiated by the pass
-    (unfortunately later reverted due to regression in compile-times).
-  - Implementation of boolean and integer types for `ISLE`, Cranelift's
-    pattern-matching DSL.
-  - Various minor bug-fixes and documentation improvements to `ISLE`.
-  - Rewrote the `pulley` bytecode interpreter to use the tail-recursive
-    interpreter pattern to reduce branch mispredications in opcode dispatch.
+    - Added new rewrites to the peephole optimisation pass.
+    - Modified the Global Value Numbering pass to sort arguments to commutative
+      operators, to increase the number of instructions eliminated by the pass
+      (unfortunately later reverted due to regression in compile-times).
+    - Implemented boolean and integer types for `ISLE`, Cranelift's
+      pattern-matching DSL.
+    - Various minor bug-fixes and documentation improvements to `ISLE`.
+  - Contributions to Pulley, the portable bytecode interpreter that allows
+    Wasmtime to run WebAssembly on targets that are not yet supported by
+    Cranelift.
+    - Rewrote the bytecode interpreter to use the tail-recursive interpreter
+      pattern to reduce branch mispredictions in opcode dispatch.
+    - Added opcodes for pushing and popping multiple registers to/from the stack
+      in a single instruction.
+    - Reduced the size of the most commonly used instructions from 4 bytes to 3
+      bytes by packing the register arguments into a bitfield.
 ]
 
 #resume-entry(
@@ -117,6 +127,9 @@
   - Added `if` expressions to the language.
   - Investigated and fixed exponential memory usage in printing of nested
     expressions.
+  - Investigated methods for compiling pattern matching to simpler trees of
+    switch expressions, and for checking patterns for exhaustiveness and
+    redundancy.
 ]
 
 = Skills
@@ -138,6 +151,8 @@
 #resume-item[
   - Graduated with First Class Honours
   - Awarded Undergraduate Scholarship for academic performance in 1st year
+  - Modules studied included: Compilers, Computer Architecture, Microcontrollers
+  - Undergraduate dissertation: "A LLVM compiler for a subset of Rust"
 ]
 
 #resume-entry(
