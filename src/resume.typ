@@ -36,7 +36,7 @@
       rewriting `printf` implementation to conform to the C language standard.
     - Parallelised the invocation of `clang-tidy` to reduce time spent waiting
       for static analysis results in CI.
-    - Enable `-Werror` compiler flag for all Hafnium code.
+    - Enabled `-Werror` compiler flag and fixed all warnings in the codebase.
     - Upgraded out of date `clang` toolchain from v16 to v18, and resolved to keep up
       to date with future `clang` releases.
 ]
