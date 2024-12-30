@@ -56,7 +56,7 @@
   LLVM's target independent IR (LLVM-IR) and its target dependent IR
   (SelectionDAG), and would enjoy the opportunity to learn GCC's IR as well.
 
-  I also investigated changing Rust's default linker to `lld` to reduce compile
+  I investigated changing Rust's default linker to `lld` to reduce compile
   times on Aarch64 Linux targets. This required first setting up an internal
   deployment of Rust's `crater` tool to find Rust libraries that would be broken
   by the change and work with maintainers to resolve the issues. I then
@@ -87,6 +87,8 @@
   pattern-matching DSL for Cranelift) and Fathom (a dependently-typed data
   description language), and would appreciate the opportunity to implement
   new C/C++ features or static analyses in GCC.
+
+  #linebreak()
 
   = C and C++ experience
   I have several years of C and C++ experience. During my time at Arm, I have
