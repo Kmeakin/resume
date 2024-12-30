@@ -113,6 +113,8 @@
       bytes by packing the register arguments into a bitfield.
 ]
 
+#linebreak()
+
 #resume-entry(
   title: "Fathom",
   date: "2022 - 2023",
