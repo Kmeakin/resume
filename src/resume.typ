@@ -175,3 +175,15 @@
   - 9 $A^*$s, 1 $A$
   - Awarded academic scholarship for A levels based on GCSE results
 ]
+
+#resume-entry(
+  title: "Hobbies and Interests",
+)
+#resume-item[
+  - Cycling, especially around Cambridge and the surrounding countryside during
+    the summer.
+  - Reading, particularly science fiction.
+  - Pub quizzes, I am a regular at the quizz on Thursday nights at the Grain &
+    Hop Store.
+]
+
